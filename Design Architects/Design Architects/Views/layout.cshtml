@@ -1,0 +1,59 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+    var settings = Umbraco.Content(1058);
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="~/Content/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+
+
+    <script src="~/Content/js/plugins/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/js/plugins/jquery.bxslider.min.js"></script>
+</head>
+<body class="c5">
+    <div class="container">
+        <div class="row c5">
+            <nav>
+                <a href="/Home"><img src="@Umbraco.Media(settings.logo).Url" width="100" height="100" /></a>
+                @Umbraco.RenderMacro("Menu", new { startNodeId = "1054" })
+            </nav>
+        </div>
+
+        <div class="row c1 main">            
+                @RenderBody()
+            @if (CurrentPage.AncestorOrSelf().Id != 1102)
+            {
+            <div class="t33 spd left c6">
+                <h3>Nyheder</h3>
+                <div class="text">
+                    @Umbraco.RenderMacro("News", new { startNodeId = settings.newsList })
+                </div>
+            </div>
+            }
+        </div>
+        <div class="row c5">
+            <footer class="spd">
+                <ul>
+                    <li><b>@settings.firmaNavn</b></li>
+                    <li>
+                       <span class="icon-location"></span> @settings.adresse, @settings.by
+                    </li>
+                    <li>
+                        <span class="icon-envelop"></span> <a href="mailto:@settings.eMail">@settings.eMail</a>
+                    </li>
+                    <li>
+                        <span class="icon-support"></span> @settings.telefon
+                    </li>
+                    <li>
+                        <span class="icon-fax"></span> @settings.fax
+                    </li>
+            </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

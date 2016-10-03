@@ -1,0 +1,49 @@
+﻿nav {
+    img {
+        width: 10%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    ul {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            a{
+                display:inline-block;
+                @extend .spd;
+               
+            }
+            
+            ul {
+                display:none;
+                @extend .c1;
+                @extend .border-1;
+                width: auto;
+                z-index: 60;
+               position:absolute;
+               li {                   
+               display:block;
+               a{
+                   width: 100%;
+                   &:hover {
+                       
+                   @extend .c3;
+                   }
+               }
+
+               }
+            }
+            &:hover {
+                ul {                    
+                    display:block;
+                }
+            }
+        }
+    }
+}

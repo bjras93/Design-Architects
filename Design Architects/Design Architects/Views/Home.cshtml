@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "layout.cshtml";
+}
+<div class="t1 spd slider width: 100%; height: 300px;">
+@Umbraco.RenderMacro("Slider", new {startNodeId=@Umbraco.Field("imageSlider")})
+</div>
+<div class="t66 c1 spd left">
+	<h3>@Umbraco.Field("title")</h3>
+    <div class="text">
+        @Umbraco.Field("text")
+        </div>
+    </div>
+
+<script src="~/Content/js/script/slider.js"></script>
+<script>
+    slider.init();
+</script>

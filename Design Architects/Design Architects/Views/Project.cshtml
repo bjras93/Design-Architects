@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Project>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "layout.cshtml";
+}
+<div class="projectSlide">
+@Umbraco.RenderMacro("ProjectSlider")
+	</div>
+<h2>@Umbraco.Field("title")</h2>
+	
+<div class="text">
+	@Umbraco.Field("text")
+	</div>
+	
+<script src="~/Content/js/script/slider.js"></script>
+<script>
+    slider.init();
+</script>

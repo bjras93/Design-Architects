@@ -1,0 +1,27 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+     Startet : Mon Oct 03 09:37:15 2016
+
+       Kilde : C:\Users\bjoe0771\Desktop\DA\Design Architects\Design Architects\Umbraco_Client\
+ Destination : C:\Users\bjoe0771\Desktop\DA\Design Architects\Design Architects\App_Data\NuGetBackup\20161003-093713\Umbraco_Client\
+
+       Filer : *.*
+	    
+Indstillinger : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Users\bjoe0771\Desktop\DA\Design Architects\Design Architects\Umbraco_Client\
+
+------------------------------------------------------------------------------
+
+               I alt  KopieretSprunget overUoverensstemmelse MISLYKKET    Ekstra
+   Mapper:         1         0         1         0         0         0
+    Filer:         0         0         0         0         0         0
+     Byte:         0         0         0         0         0         0
+    Gange:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+Afsluttet: Mon Oct 03 09:37:15 2016
